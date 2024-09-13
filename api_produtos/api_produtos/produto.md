@@ -24,3 +24,13 @@ th:if="${condicao}" -> Exibe o elemento HTML apenas se a condição for verdadei
 
 [D]. Iteração
 th:each="item : ${lista}" => Itera sobre uma coleção de dados.
+
+
+## Propriedades do fragments
+1. th:fragment -> é usado para definir blocos de códigos reutilizáveis em um temple. Esses fragmentos podem ser cabeçalhos, rodapés, menus de navegação ou qualquer outro conteúdo que você queira reutilizar em várias páginas. `(FICA NA TAG DA PÁGINA A SER REUTILIZADA)`
+
+2. th:replace -> Substitui o conteúdo do elemento atual com o conteúdo do fragmento específico. Ela é usada para herdar e incluir partes de código de outro template ou fragmento. `(FICA NA TAG DA PÁGINA DESTINO)`
+
+3. th:insert -> Inserre o conteúdo do fragmento  dentro do elemento no qual é aplicada, mas não substitui o elemento raiz. `(FICA NA TAG DA PÁGINA DESTINO)`
+
+4. th:include -> è semelhante ao th:insert, mas com uma diferença: Ela inclui o conteúdo do fragmento dentro do elemento e pode preserver o contúdo do elemento pai.
