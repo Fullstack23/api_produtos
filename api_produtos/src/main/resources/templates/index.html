@@ -1,11 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index do Thymeleaf</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{css/style.css}">
 </head>
+
 <body>
-    <h1>Mensagem Padrão</h1>
+
+  <div th:replace="fragments/header :: cabecalho"></div>
+  <div th:replace="fragments/section :: secao"></div>
+  <div th:replace="fragments/footer :: rodape"></div>
+
 </body>
+
 </html>
+
+
+
+
+<!-- <div class="container">
+  <h1>Lista de Produto</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Preço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ID</td>
+        <td>Nome do Produto</td>
+        <td>Preço do Produto</td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="cadastro.html">Cadastrar novo Produto</a>
+</div> -->

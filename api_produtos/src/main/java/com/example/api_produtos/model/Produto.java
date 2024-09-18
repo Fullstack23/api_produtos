@@ -1,5 +1,7 @@
 package com.example.api_produtos.model;
 
+// Produto.java
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
