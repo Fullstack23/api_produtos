@@ -20,14 +20,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>ID</td>
-        <td>Nome do Produto</td>
-        <td>Preço do Produto</td>
+      <tr th:each="produto : ${produtos}">
+        <td th:text="${produto.id}">ID</td>
+        <td th:text="${produto.nome}">Nome do Produto</td>
+        <td th:text="${produto.preco}">Preço do Produto</td>
       </tr>
     </tbody>
   </table>
-  <a href="cadastro.html">Cadastrar novo Produto</a>
+  <a th:href="@{/cadastro}">Cadastrar novo Produto</a>
 </div>
 </body>
 

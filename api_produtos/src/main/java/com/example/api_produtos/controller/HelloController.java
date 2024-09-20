@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.example.api_produtos.model.Produto;
 import com.example.api_produtos.model.ProdutoRepository;
 
-
-
 @Controller
 public class HelloController {
 
@@ -22,14 +20,17 @@ public class HelloController {
         model.addAttribute("produtos", produtoRepository.findAll());
         return "lista";
     }
+
     @GetMapping("/cadastro")
     public String mostrarFormulario(Model model) {
         model.addAttribute("produto", new Produto());
         return "cadastro";
     }
+
     @PostMapping("/cadastro")
     public String cadastrarProduto(Produto produto) {
         produtoRepository.save(produto);
         return "redirect:/";
     }
+
 }

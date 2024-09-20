@@ -14,17 +14,22 @@
 
 3. Principais expressões do Thymeleaf:
 [A]. Exibição de dados
-th:text="${variavel}" -> Substitui o conteúdo do HTML com o valor da variável.
+`th:text="${variavel}"` -> Substitui o conteúdo do HTML com o valor da variável.
 
 [B]. Links dinâmicos
-th:href="@{/caminho}" -> Gera URLs dinâmicas.
+`th:href="@{/caminho}"` -> Gera URLs dinâmicas.
 
 [C]. Condicionais
-th:if="${condicao}" -> Exibe o elemento HTML apenas se a condição for verdadeira.
+`th:if="${condicao}"` -> Exibe o elemento HTML apenas se a condição for verdadeira.
 
 [D]. Iteração
-th:each="item : ${lista}" => Itera sobre uma coleção de dados.
+`th:each="item : ${lista}"` => Itera sobre uma coleção de dados.
 
+[E]. Objeto
+`th:object="${objeto}"` => Envia ou recebe informações do objeto mencionado.
+
+[F]. Vinculação
+`th: field="*{nome}"` => Vincula um campo HTML a um atributo do objeto.
 
 ## Propriedades do fragments
 1. th:fragment -> é usado para definir blocos de códigos reutilizáveis em um template. Esses fragmentos podem ser cabeçalhos, rodapés, menus de navegação ou qualquer outro conteúdo que você queira reutilizar em várias páginas. `(FICA NA TAG DA PÁGINA A SER REUTILIZADA)`
